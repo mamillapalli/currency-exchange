@@ -1,8 +1,14 @@
 package com.learning.microservices.currencyexchange;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
+@Entity(name="CURRENCY_EXCHANGE")
 public class CurrencyExchange {
+    @Id
+    @GeneratedValue
     private long id;
     private String fromCurrency;
     private String toCurrency;
